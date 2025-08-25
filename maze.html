@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GPT Pirates — Laberinto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="game">
+  <div class="maze-wrapper">
+    <div class="controls">
+      <select id="difficulty">
+        <option value="easy">Fácil</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Difícil</option>
+      </select>
+      <button id="playBtn" type="button">Start</button>
+    </div>
+    <canvas id="maze" width="600" height="600" aria-label="Laberinto"></canvas>
+    <p id="message" class="hidden">¡Tesoro encontrado!</p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
