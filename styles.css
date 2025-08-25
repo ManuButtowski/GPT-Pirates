@@ -16,7 +16,7 @@ body.game {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  background: url('assets/images/island-background.png') center/cover no-repeat;
   color: #000;
 }
 
