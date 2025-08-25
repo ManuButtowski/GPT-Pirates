@@ -12,6 +12,14 @@ body {
   color: #e5e7eb;
 }
 
+body.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: #000;
+}
+
 .hero{
   position: relative;
   width: 100%;
@@ -45,3 +53,28 @@ body {
   font-size: clamp(14px, 2vw, 18px);
 }
 .btn-start:hover{ background: var(--btn-bg-hover); }
+
+/* Página del laberinto */
+.maze-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+.controls select,
+.controls button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#maze {
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.hidden { display: none; }
