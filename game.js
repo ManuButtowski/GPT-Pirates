@@ -10,6 +10,9 @@ let rows = 0;
 let cellSize = 0;
 let player = { x: 0, y: 0 };
 let won = false;
+const pirateImg = new Image();
+pirateImg.src = 'assets/images/pirate-sprite.png';
+pirateImg.onload = () => drawPlayer();
 
 playBtn.addEventListener('click', () => {
   const diff = difficultySelect.value;
@@ -171,8 +174,14 @@ function drawMaze() {
 }
 
 function drawPlayer() {
-  ctx.font = `${cellSize * 0.8}px serif`;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText('🏴\u200d☠️', (player.x + 0.5) * cellSize, (player.y + 0.5) * cellSize);
+  if (!pirateImg.complete) return;
+  const padding = cellSize * 0.1;
+  const size = cellSize - padding * 2;
+  ctx.drawImage(
+    pirateImg,
+    player.x * cellSize + padding,
+    player.y * cellSize + padding,
+    size,
+    size
+  );
 }
