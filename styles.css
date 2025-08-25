@@ -12,14 +12,6 @@ body {
   color: #e5e7eb;
 }
 
-body.game {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-image: url('assets/images/island-background.png');
-  color: #000;
-}
-
 .hero{
   position: relative;
   width: 100%;
